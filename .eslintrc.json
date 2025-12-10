@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-unused-vars": ["warn"],
+    "no-console": ["warn"],
+    "no-debugger": ["error"],
+    "no-alert": ["warn"],
+    "no-eval": ["error"],
+    "no-implied-eval": ["error"],
+    "no-new-func": ["error"],
+    "no-script-url": ["error"],
+    "curly": ["error", "all"],
+    "eqeqeq": ["error", "always"],
+    "no-magic-numbers": ["warn", { "ignore": [0, 1, -1, 100, 1000] }],
+    "no-duplicate-imports": ["error"],
+    "prefer-const": ["error"],
+    "no-var": ["error"],
+    "arrow-spacing": ["error"],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "comma-dangle": ["error", "always-multiline"],
+    "max-len": ["warn", { "code": 120 }],
+    "no-trailing-spaces": ["error"],
+    "eol-last": ["error"],
+    "no-multiple-empty-lines": ["error", { "max": 2 }],
+    "accessibility/click-events-have-key-events": "off",
+    "accessibility/no-onchange": "off"
+  },
+  "globals": {
+    "gtag": "readonly",
+    "tailwind": "readonly",
+    "Calendly": "readonly"
+  },
+  "overrides": [
+    {
+      "files": ["script.js"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}

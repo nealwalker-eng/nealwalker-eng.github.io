@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news and updates from America Protective Security">
+    <title>News - America Protective Security</title>
+    
+    <!-- Preload Google Fonts with font-display: swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'navy': '#003366',
+              'medium-blue': '#004080',
+              'black-primary': '#000000',
+              'dark-gray': '#4D4D4D',
+              'medium-gray': '#6c757d',
+              'light-gray': '#f8f9fa',
+              'very-light-gray': '#e9ecef'
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(135deg, #003366, #004080)'
+            },
+            boxShadow: {
+              'soft': '0 4px 6px rgba(0,0,0,0.1)',
+              'medium': '0 10px 15px rgba(0,0,0,0.2)'
+            },
+            fontFamily: {
+              'heading': ['Poppins', 'sans-serif'],
+              'body': ['Work Sans', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-white text-dark-gray">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50">
+        <nav class="bg-navy text-white shadow-medium">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex justify-between items-center py-4">
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="images/APS Eagle Logo.jpg" alt="America Protective Security Logo" class="h-8 w-auto">
+                        </a>
+                    </div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="/who-we-are.html" class="hover:text-medium-blue smooth-transition">Who We Are</a>
+                        <a href="/what-we-do.html" class="hover:text-medium-blue smooth-transition">What We Do</a>
+                        <a href="/government-security.html" class="hover:text-medium-blue smooth-transition">Government Security</a>
+                        <a href="/commercial-security.html" class="hover:text-medium-blue smooth-transition">Commercial Security</a>
+                        <a href="/training.html" class="hover:text-medium-blue smooth-transition">Training</a>
+                        <a href="/careers.html" class="hover:text-medium-blue smooth-transition">Careers</a>
+                        <a href="/news.html" class="text-medium-blue">News</a>
+                        <a href="/contact.html" class="hover:text-medium-blue smooth-transition bg-medium-blue px-4 py-2 rounded">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-96 bg-cover bg-center bg-no-repeat" style="background-image: url('images/new careers hero.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </section>
+
+        <!-- Page Title and Introduction Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-8 text-center">
+                <h1 class="font-heading font-bold text-5xl text-black-primary mb-8">America Protective Security News</h1>
+                <p class="text-xl lg:text-2xl font-light max-w-4xl mx-auto text-dark-gray">
+                    Discover APS's recent accomplishments, from securing federal contracts to earning recognitions for training and service excellence, highlighting our dedication to superior protective solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- News Posts -->
+        <!-- Post 1 -->
+        <section class="py-12">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/600x400?text=Contract+Signing+Ceremony" alt="Federal contract signing ceremony with APS leadership" class="w-full h-96 object-cover rounded-lg shadow-soft" loading="lazy">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="font-heading font-bold text-3xl mb-6 text-navy">Awarded DC Federal Building Contract</h2>
+                        <p class="text-lg text-medium-gray leading-relaxed">
+                            In 2025, APS secured a multi-year contract to provide static and mobile security for a key government facility, demonstrating our compliance with FPS standards and ability to deliver reliable protection. This milestone contract represents our growing capability to serve federal clients with the highest standards of security and professionalism.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post 2 -->
+        <section class="py-12 bg-light-gray">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/600x400?text=DHS+Training+Excellence+Award" alt="DHS training excellence award trophy presentation" class="w-full h-96 object-cover rounded-lg shadow-soft" loading="lazy">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="font-heading font-bold text-3xl mb-6 text-navy">Recognized for Training Excellence</h2>
+                        <p class="text-lg text-medium-gray leading-relaxed">
+                            Honored by DHS for outstanding adherence to PSOTP and NWDTP programs, underscoring our commitment to officer preparedness and federal partnership. This recognition validates our investment in comprehensive training that exceeds industry standards and prepares our officers for the most challenging security environments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post 3 -->
+        <section class="py-12">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/600x400?text=Virginia+Expansion+Team+Event" alt="Team celebration for Virginia service expansion" class="w-full h-96 object-cover rounded-lg shadow-soft" loading="lazy">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="font-heading font-bold text-3xl mb-6 text-navy">Expanded to VA Sites</h2>
+                        <p class="text-lg text-medium-gray leading-relaxed">
+                            Launched new mobile patrol services in Virginia, enhancing security for commercial and government clients with integrated command center support. This expansion demonstrates our ability to scale operations while maintaining the quality and reliability that our clients depend on throughout the DMV region.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="py-12 bg-navy text-white">
+            <div class="container mx-auto px-4 lg:px-8 text-center">
+                <h2 class="font-heading font-bold text-3xl mb-6">Stay Updated</h2>
+                <p class="text-xl mb-8">Subscribe to receive our latest news and updates directly to your inbox.</p>
+                
+                <div class="max-w-md mx-auto">
+                    <form class="flex flex-col sm:flex-row gap-4">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email address" 
+                            class="flex-1 px-4 py-3 rounded text-dark-gray focus:outline-none focus:ring-2 focus:ring-medium-blue"
+                        >
+                        <button 
+                            type="submit" 
+                            class="bg-medium-blue hover:bg-white hover:text-navy px-6 py-3 rounded font-semibold smooth-transition"
+                        >
+                            Subscribe for Updates
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black-primary text-white py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="border-t border-dark-gray pt-8 text-center">
+                <p class="text-medium-gray">
+                    © 2025 America Protective Security. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
