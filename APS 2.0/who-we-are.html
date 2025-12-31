@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about America Protective Security - Our mission, values, and commitment to excellence">
+    <title>Who We Are - America Protective Security</title>
+    
+    <!-- Preload Google Fonts with font-display: swap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'navy': '#003366',
+              'medium-blue': '#004080',
+              'black-primary': '#000000',
+              'dark-gray': '#4D4D4D',
+              'medium-gray': '#6c757d',
+              'light-gray': '#f8f9fa',
+              'very-light-gray': '#e9ecef'
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(135deg, #003366, #004080)'
+            },
+            boxShadow: {
+              'soft': '0 4px 6px rgba(0,0,0,0.1)',
+              'medium': '0 10px 15px rgba(0,0,0,0.2)'
+            },
+            fontFamily: {
+              'heading': ['Poppins', 'sans-serif'],
+              'body': ['Work Sans', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body bg-white text-dark-gray">
+    <!-- Navigation (same as index.html) -->
+    <header class="sticky top-0 z-50">
+        <nav class="bg-navy text-white shadow-medium">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex justify-between items-center py-4">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="images/APS Eagle Logo.jpg" alt="America Protective Security Logo" class="h-8 w-auto">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex space-x-8">
+                        <a href="/who-we-are.html" class="text-medium-blue">Who We Are</a>
+                        <a href="/what-we-do.html" class="hover:text-medium-blue smooth-transition">What We Do</a>
+                        <a href="/government-security.html" class="hover:text-medium-blue smooth-transition">Government Security</a>
+                        <a href="/commercial-security.html" class="hover:text-medium-blue smooth-transition">Commercial Security</a>
+                        <a href="/training.html" class="hover:text-medium-blue smooth-transition">Training</a>
+                        <a href="/careers.html" class="hover:text-medium-blue smooth-transition">Careers</a>
+                        <a href="/news.html" class="hover:text-medium-blue smooth-transition">News</a>
+                        <a href="/blog.html" class="hover:text-medium-blue smooth-transition">Blog</a>
+                        <a href="/contact.html" class="hover:text-medium-blue smooth-transition bg-medium-blue px-4 py-2 rounded">Contact</a>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-white" 
+                            id="mobile-menu-toggle" 
+                            aria-expanded="false" 
+                            aria-controls="mobile-menu"
+                            aria-label="Toggle mobile navigation menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Full-Screen Overlay -->
+        <div id="mobile-menu" 
+             class="fixed inset-0 bg-white z-50 hidden md:hidden"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="mobile-menu-title">
+            <div class="flex flex-col h-full">
+                <!-- Mobile Menu Header -->
+                <div class="flex justify-between items-center px-4 py-4 border-b border-gray-200">
+                    <img src="images/APS Eagle Logo.jpg" alt="America Protective Security" class="h-8 w-auto">
+                    <button id="mobile-menu-close" 
+                            class="text-navy p-2"
+                            aria-label="Close mobile menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Links -->
+                <nav class="flex-1 overflow-y-auto px-4 py-6">
+                    <div class="space-y-1">
+                        <a href="/who-we-are.html" class="block px-4 py-3 text-lg font-semibold text-navy hover:bg-light-gray rounded-lg transition-colors">Who We Are</a>
+                        <a href="/what-we-do.html" class="block px-4 py-3 text-lg font-semibold text-navy hover:bg-light-gray rounded-lg transition-colors">What We Do</a>
+                        <a href="/government-security.html" class="block px-4 py-3 text-lg font-semibold text-navy hover:bg-light-gray rounded-lg transition-colors">Government Security</a>
+                        <a href="/commercial-security.html" class="block px-4 py-3 text-lg font-semibold text-navy hover:bg-light-gray rounded-lg transition-colors">Commercial Security</a>
+                        <a href="/training.html" class="block px-4 py-3 text-lg font-semibold text-navy hover:bg-light-gray rounded-lg transition-colors">Training</a>
+                        <a href="/careers.html" class="block px-4 py-3 text-lg font-semibold text-navy hover:bg-light-gray rounded-lg transition-colors">Careers</a>
+                        <a href="/news.html" class="block px-4 py-3 text-lg font-semibold text-navy hover:bg-light-gray rounded-lg transition-colors">News</a>
+                        <a href="/contact.html" class="block px-4 py-3 text-lg font-semibold text-white bg-navy hover:bg-medium-blue rounded-lg transition-colors text-center mt-4">Contact Us</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-96 bg-cover bg-center bg-no-repeat hero-who-we-are">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        </section>
+
+        <!-- Page Title and Introduction Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 lg:px-8 text-center">
+                <h1 class="font-heading font-bold text-5xl text-black-primary mb-8">Who We Are</h1>
+                <p class="text-xl lg:text-2xl font-light max-w-4xl mx-auto text-dark-gray">
+                    As a small business in the security sector, America Protective Security (APS) is built on a foundation of integrity, expertise, and strategic growth. We have evolved from a local provider to a regional leader in protective services for federal and commercial clients.
+                </p>
+            </div>
+        </section>
+
+        <!-- Leadership Team Section -->
+        <section class="py-12">
+            <div class="container mx-auto px-4 lg:px-8">
+                <h2 class="font-heading font-bold text-3xl mb-12 text-navy text-center">Our Leadership Team</h2>
+                
+                <!-- Leadership Grid - Mobile First, Responsive -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    
+                    <!-- Leader 1: Chief Bajon Bihai -->
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/300x300?text=Chief+Bajon+Bihai" alt="Chief Bajon Bihai professional headshot" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-soft" loading="lazy">
+                        <h3 class="font-heading font-semibold text-xl mb-1 text-navy">Chief Bajon Bihai</h3>
+                        <p class="text-medium-gray mb-4">Founder & Chief Executive Officer</p>
+                        <button 
+                            onclick="openModal('leader-bihai-modal')"
+                            class="bg-navy text-white hover:bg-medium-blue px-6 py-2 rounded font-semibold smooth-transition focus:outline-none focus:ring-2 focus:ring-medium-blue focus:ring-offset-2"
+                        >
+                            Learn More
+                        </button>
+                    </div>
+                    
+                    <!-- Leader 2: Beatrice Bihai -->
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/300x300?text=Beatrice+Bihai" alt="Beatrice Bihai professional headshot" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-soft" loading="lazy">
+                        <h3 class="font-heading font-semibold text-xl mb-1 text-navy">Beatrice Bihai</h3>
+                        <p class="text-medium-gray mb-4">Director of Operations</p>
+                        <button 
+                            onclick="openModal('leader-beatrice-modal')"
+                            class="bg-navy text-white hover:bg-medium-blue px-6 py-2 rounded font-semibold smooth-transition focus:outline-none focus:ring-2 focus:ring-medium-blue focus:ring-offset-2"
+                        >
+                            Learn More
+                        </button>
+                    </div>
+                    
+                    <!-- Leader 3: Bless Ketum -->
+                    <div class="text-center">
+                        <img src="https://via.placeholder.com/300x300?text=Bless+Ketum" alt="Bless Ketum professional headshot" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover shadow-soft" loading="lazy">
+                        <h3 class="font-heading font-semibold text-xl mb-1 text-navy">Bless Ketum</h3>
+                        <p class="text-medium-gray mb-4">Security Operations Manager</p>
+                        <button 
+                            onclick="openModal('leader-ketum-modal')"
+                            class="bg-navy text-white hover:bg-medium-blue px-6 py-2 rounded font-semibold smooth-transition focus:outline-none focus:ring-2 focus:ring-medium-blue focus:ring-offset-2"
+                        >
+                            Learn More
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Core Focuses Section -->
+        <section class="py-12 bg-light-gray">
+            <div class="container mx-auto px-4 lg:px-8">
+                <h2 class="font-heading font-bold text-3xl mb-8 text-navy text-center">Our Core Focuses</h2>
+                <p class="text-lg text-medium-gray text-center max-w-4xl mx-auto">
+                    At APS, we prioritize two fundamental objectives: delivering exceptional service to our clients and cultivating an outstanding workplace for our employees. We uphold clear expectations and high standards while fostering a rewarding environment that recognizes and supports professional growth. Our mission is to provide paramount security services, safeguarding our clients' critical assets with the utmost professionalism and dedication.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key Policies Section -->
+        <section class="py-12">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <svg class="w-8 h-8 text-navy mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                    <h2 class="font-heading font-bold text-3xl text-navy">Key Policies</h2>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-soft">
+                    <div class="text-dark-gray">
+                        <p class="mb-6"><strong>Quality Policy:</strong> APS delivers high-quality security services that meet legal, regulatory, and client requirements. We prevent disruptions, ensure personnel safety, protect the environment, and continuously improve our management systems to enhance customer satisfaction and operational efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="py-12 bg-light-gray">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <svg class="w-8 h-8 text-navy mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    <h2 class="font-heading font-bold text-3xl text-navy">Certifications</h2>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-soft">
+                    <div class="text-dark-gray">
+                        <h3 class="font-semibold text-lg mb-4 text-navy">State Security Licenses:</h3>
+                        <ul class="space-y-2 mb-4">
+                            <li>MD License No: 106-4499</li>
+                            <li>DC License No: SAB3178</li>
+                            <li>VA DCJS No: 11-4726</li>
+                        </ul>
+                        <p class="text-medium-gray">Aligned with FPS and DHS standards for protective services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- History Section -->
+        <section class="py-12">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="flex items-center mb-8">
+                    <svg class="w-8 h-8 text-navy mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h2 class="font-heading font-bold text-3xl text-navy">Our History</h2>
+                </div>
+                
+                <div class="bg-light-gray p-8 rounded-lg mb-8">
+                    <p class="text-lg text-medium-gray leading-relaxed mb-6">
+                        Founded in 2010 as a small, service-disabled, minority-owned, Army veteran-led security provider in the Washington, DC Metro region, APS has expanded across the DMV area through strategic growth and partnerships. Beginning with commercial contracts, we progressed into federal protective services through the implementation of FPS-compliant training programs. Key milestones include the launch of mobile patrols in Maryland and Virginia in 2024 and securing our first major government contract in 2025. Drawing inspiration from industry leaders, APS integrates innovation with ethical integrity, establishing itself as a trusted provider in physical security for federal and commercial clients.
+                    </p>
+                    
+                    <!-- Timeline -->
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-4 h-4 bg-navy rounded-full mr-4"></div>
+                            <div class="flex-1 border-b border-gray-300 pb-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-semibold text-navy">2010</span>
+                                    <span class="text-dark-gray">Company Founded</span>
+                                </div>
+                                <p class="text-sm text-medium-gray mt-1">Established as a service-disabled, minority-owned, Army veteran-led security provider in the Washington, DC Metro region.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-4 h-4 bg-medium-blue rounded-full mr-4"></div>
+                            <div class="flex-1 border-b border-gray-300 pb-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-semibold text-navy">2010-2023</span>
+                                    <span class="text-dark-gray">Commercial Growth</span>
+                                </div>
+                                <p class="text-sm text-medium-gray mt-1">Achieved significant expansion throughout the DMV region by securing commercial contracts and developing FPS-compliant training programs to support federal protective services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-4 h-4 bg-medium-blue rounded-full mr-4"></div>
+                            <div class="flex-1 border-b border-gray-300 pb-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-semibold text-navy">2024</span>
+                                    <span class="text-dark-gray">Mobile Patrols Launch</span>
+                                </div>
+                                <p class="text-sm text-medium-gray mt-1">Launched mobile patrol services in Maryland and Virginia, enhancing our service capabilities.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-4 h-4 bg-navy rounded-full mr-4"></div>
+                            <div class="flex-1 border-b border-gray-300 pb-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-semibold text-navy">2025</span>
+                                    <span class="text-dark-gray">First Government Subcontract at Social Security Administration</span>
+                                </div>
+                                <p class="text-sm text-medium-gray mt-1">Secured our first major government subcontract with the Social Security Administration, marking a significant milestone in our federal security services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 w-4 h-4 bg-medium-blue rounded-full mr-4"></div>
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-semibold text-navy">Looking Ahead</span>
+                                    <span class="text-dark-gray">Strategic Growth</span>
+                                </div>
+                                <p class="text-sm text-medium-gray mt-1">We anticipate forging stronger relationships with prime contractors and establishing long-term mentorship partnerships to facilitate growth through the 8(a) Business Development Program.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Inquiry Form -->
+        <section class="py-12 bg-light-gray">
+            <div class="container mx-auto px-4 lg:px-8">
+                <div class="max-w-2xl mx-auto">
+                    <h3 class="font-heading font-bold text-2xl mb-6 text-navy text-center">Partnership Opportunities</h3>
+                    <p class="text-medium-gray text-center mb-8">
+                        Interested in partnering with APS? Tell us about your company and partnership goals.
+                    </p>
+                    
+                    <form name="partnership" method="POST" netlify class="bg-white p-6 rounded-lg shadow-soft" id="partnership-form">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="partner-company" class="block text-dark-gray mb-2 font-semibold">Company Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="partner-company" 
+                                    name="company" 
+                                    required
+                                    class="w-full px-4 py-3 border border-medium-gray rounded focus:outline-none focus:ring-2 focus:ring-medium-blue focus:border-navy"
+                                    placeholder="Your company name"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="partner-contact" class="block text-dark-gray mb-2 font-semibold">Contact Person *</label>
+                                <input 
+                                    type="text" 
+                                    id="partner-contact" 
+                                    name="contact-person" 
+                                    required
+                                    class="w-full px-4 py-3 border border-medium-gray rounded focus:outline-none focus:ring-2 focus:ring-medium-blue focus:border-navy"
+                                    placeholder="Full name"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="partner-email" class="block text-dark-gray mb-2 font-semibold">Email *</label>
+                                <input 
+                                    type="email" 
+                                    id="partner-email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-3 border border-medium-gray rounded focus:outline-none focus:ring-2 focus:ring-medium-blue focus:border-navy"
+                                    placeholder="contact@company.com"
+                                >
+                            </div>
+                            
+                            <div>
+                                <label for="partner-phone" class="block text-dark-gray mb-2 font-semibold">Phone</label>
+                                <input 
+                                    type="tel" 
+                                    id="partner-phone" 
+                                    name="phone"
+                                    class="w-full px-4 py-3 border border-medium-gray rounded focus:outline-none focus:ring-2 focus:ring-medium-blue focus:border-navy"
+                                    placeholder="(555) 123-4567"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="partnership-type" class="block text-dark-gray mb-2 font-semibold">Partnership Interest</label>
+                            <select 
+                                id="partnership-type" 
+                                name="partnership-type"
+                                class="w-full px-4 py-3 border border-medium-gray rounded focus:outline-none focus:ring-2 focus:ring-medium-blue focus:border-navy"
+                            >
+                                <option value="">Select partnership type</option>
+                                <option value="prime-contractor">Prime Contractor Opportunity</option>
+                                <option value="subcontracting">Subcontracting Partnership</option>
+                                <option value="joint-venture">Joint Venture</option>
+                                <option value="mentor-protege">Mentor-Protégé Program</option>
+                                <option value="teaming">Teaming Agreement</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="partner-message" class="block text-dark-gray mb-2 font-semibold">Tell us about your company and partnership goals *</label>
+                            <textarea 
+                                id="partner-message" 
+                                name="message" 
+                                rows="4" 
+                                required
+                                class="w-full px-4 py-3 border border-medium-gray rounded focus:outline-none focus:ring-2 focus:ring-medium-blue focus:border-navy"
+                                placeholder="Describe your company, industry focus, and what type of partnership you're seeking with APS..."
+                            ></textarea>
+                        </div>
+                        
+                        <button 
+                            type="submit" 
+                            class="w-full bg-navy text-white hover:bg-medium-blue px-6 py-3 rounded font-semibold smooth-transition focus:outline-none focus:ring-2 focus:ring-medium-blue focus:ring-offset-2"
+                        >
+                            Submit Partnership Inquiry
+                        </button>
+                        
+                        <p class="text-sm text-medium-gray mt-4 text-center">
+                            * Required fields. We'll respond within 48 hours to discuss partnership opportunities.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-black-primary text-white py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="https://via.placeholder.com/32x32?text=APS" alt="America Protective Security Logo" class="h-8 w-auto mr-3" loading="lazy">
+                        <span class="font-heading font-bold text-xl">America Protective Security</span>
+                    </div>
+                    <p class="text-medium-gray mb-4">
+                        Premier government and commercial security services with uncompromising excellence and professional integrity.
+                    </p>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-heading font-semibold text-lg mb-4">Contact Information</h4>
+                    <div class="space-y-2 text-medium-gray">
+                        <p>📞 <a href="tel:1-800-APS-SEC" class="hover:text-white">1-800-APS-SEC</a></p>
+                        <p>✉️ <a href="mailto:info@americaprotectivesecurity.com" class="hover:text-white">info@americaprotectivesecurity.com</a></p>
+                        <p>📍 Washington, DC Metro Area</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-semibold text-lg mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="/who-we-are.html" class="block text-medium-blue">Who We Are</a>
+                        <a href="/government-security.html" class="block text-medium-gray hover:text-white smooth-transition">Government Security</a>
+                        <a href="/commercial-security.html" class="block text-medium-gray hover:text-white smooth-transition">Commercial Security</a>
+                        <a href="/training.html" class="block text-medium-gray hover:text-white smooth-transition">Training</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-gray mt-8 pt-8 text-center">
+                <p class="text-medium-gray mb-2">
+                    © 2025 America Protective Security. All rights reserved.
+                </p>
+                <div class="space-x-4 text-sm">
+                    <button 
+                        class="text-medium-gray hover:text-white underline focus:outline-none focus:ring-2 focus:ring-medium-blue rounded" 
+                        onclick="openModal('privacy-modal')"
+                        tabindex="0"
+                    >
+                        Privacy Policy
+                    </button>
+                    <button 
+                        class="text-medium-gray hover:text-white underline focus:outline-none focus:ring-2 focus:ring-medium-blue rounded" 
+                        onclick="openModal('terms-modal')"
+                        tabindex="0"
+                    >
+                        Terms of Service
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm" role="dialog" aria-labelledby="privacy-title" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-96 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 id="privacy-title" class="text-2xl font-heading font-bold text-navy">Privacy Policy</h2>
+                        <button 
+                            class="text-medium-gray hover:text-navy focus:outline-none focus:ring-2 focus:ring-medium-blue rounded" 
+                            onclick="closeModal('privacy-modal')"
+                            aria-label="Close privacy policy"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="prose max-w-none">
+                        <p class="text-dark-gray mb-4">
+                            America Protective Security is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information.
+                        </p>
+                        <h3 class="font-semibold text-navy mb-2">Information We Collect</h3>
+                        <p class="text-dark-gray mb-4">
+                            We collect information you provide directly to us, such as when you fill out forms, contact us, or apply for positions.
+                        </p>
+                        <h3 class="font-semibold text-navy mb-2">How We Use Your Information</h3>
+                        <p class="text-dark-gray mb-4">
+                            We use the information we collect to provide, maintain, and improve our services, communicate with you, and comply with legal obligations.
+                        </p>
+                        <h3 class="font-semibold text-navy mb-2">Data Security</h3>
+                        <p class="text-dark-gray">
+                            We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div id="terms-modal" class="modal fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm" role="dialog" aria-labelledby="terms-title" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-96 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 id="terms-title" class="text-2xl font-heading font-bold text-navy">Terms of Service</h2>
+                        <button 
+                            class="text-medium-gray hover:text-navy focus:outline-none focus:ring-2 focus:ring-medium-blue rounded" 
+                            onclick="closeModal('terms-modal')"
+                            aria-label="Close terms of service"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="prose max-w-none">
+                        <p class="text-dark-gray mb-4">
+                            These Terms of Service govern your use of America Protective Security's website and services.
+                        </p>
+                        <h3 class="font-semibold text-navy mb-2">Acceptance of Terms</h3>
+                        <p class="text-dark-gray mb-4">
+                            By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.
+                        </p>
+                        <h3 class="font-semibold text-navy mb-2">Use License</h3>
+                        <p class="text-dark-gray mb-4">
+                            Permission is granted to temporarily download one copy of the materials on APS's website for personal, non-commercial transitory viewing only.
+                        </p>
+                        <h3 class="font-semibold text-navy mb-2">Disclaimer</h3>
+                        <p class="text-dark-gray">
+                            The materials on APS's website are provided on an 'as is' basis. APS makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leadership Modals -->
+    
+    <!-- Chief Bajon Bihai Modal -->
+    <div id="leader-bihai-modal" class="modal fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm" role="dialog" aria-labelledby="bihai-title" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-96 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 id="bihai-title" class="text-2xl font-heading font-bold text-navy">Chief Bajon Bihai</h2>
+                        <button 
+                            class="text-medium-gray hover:text-navy focus:outline-none focus:ring-2 focus:ring-medium-blue rounded" 
+                            onclick="closeModal('leader-bihai-modal')"
+                            aria-label="Close Chief Bajon Bihai profile"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="prose max-w-none">
+                        <p class="text-medium-gray mb-4 font-semibold">Founder & Chief Executive Officer</p>
+                        <p class="text-dark-gray mb-4">
+                            Chief Bajon Bihai is a distinguished veteran and the visionary founder of America Protective Security. With 15 years of comprehensive experience in the security industry, Chief Bihai has built APS from the ground up into a trusted regional leader in protective services.
+                        </p>
+                        <p class="text-dark-gray mb-4">
+                            As a service-disabled Army veteran, Chief Bihai brings military precision, strategic leadership, and an unwavering commitment to excellence to every aspect of APS operations. His extensive background spans both commercial and federal security sectors, enabling him to develop innovative solutions that meet the highest standards of safety and professionalism.
+                        </p>
+                        <p class="text-dark-gray">
+                            Under his leadership, APS has achieved significant milestones including FPS compliance, expansion across the DMV region, and securing major government contracts. Chief Bihai's vision continues to guide the company's strategic growth and commitment to protecting critical assets with uncompromising integrity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beatrice Bihai Modal -->
+    <div id="leader-beatrice-modal" class="modal fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm" role="dialog" aria-labelledby="beatrice-title" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-96 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 id="beatrice-title" class="text-2xl font-heading font-bold text-navy">Beatrice Bihai</h2>
+                        <button 
+                            class="text-medium-gray hover:text-navy focus:outline-none focus:ring-2 focus:ring-medium-blue rounded" 
+                            onclick="closeModal('leader-beatrice-modal')"
+                            aria-label="Close Beatrice Bihai profile"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="prose max-w-none">
+                        <p class="text-medium-gray mb-4 font-semibold">Director of Operations</p>
+                        <p class="text-dark-gray mb-4">
+                            Beatrice Bihai serves as the Director of Operations for America Protective Security, bringing extensive security experience and operational expertise to the leadership team. Her deep understanding of security protocols and client service excellence ensures that APS maintains the highest standards in all operational aspects.
+                        </p>
+                        <p class="text-dark-gray mb-4">
+                            As Director of Operations, Beatrice oversees daily operations, coordinates personnel deployment, and ensures seamless execution of security services across all APS contracts. Her attention to detail and commitment to quality management has been instrumental in maintaining APS's reputation for reliability and professionalism.
+                        </p>
+                        <p class="text-dark-gray">
+                            Beatrice's leadership style emphasizes clear communication, team development, and continuous improvement. She works closely with clients to understand their unique security needs and ensures that APS personnel are properly trained, equipped, and supported to deliver exceptional protective services.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bless Ketum Modal -->
+    <div id="leader-ketum-modal" class="modal fixed inset-0 bg-black bg-opacity-50 hidden z-50 backdrop-blur-sm" role="dialog" aria-labelledby="ketum-title" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-96 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 id="ketum-title" class="text-2xl font-heading font-bold text-navy">Bless Ketum</h2>
+                        <button 
+                            class="text-medium-gray hover:text-navy focus:outline-none focus:ring-2 focus:ring-medium-blue rounded" 
+                            onclick="closeModal('leader-ketum-modal')"
+                            aria-label="Close Bless Ketum profile"
+                        >
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="prose max-w-none">
+                        <p class="text-medium-gray mb-4 font-semibold">Security Operations Manager</p>
+                        <p class="text-dark-gray mb-4">
+                            Bless Ketum brings 12 years of distinguished security management experience to America Protective Security as the Security Operations Manager. His extensive background in security operations, personnel management, and tactical coordination makes him an invaluable asset to the APS leadership team.
+                        </p>
+                        <p class="text-dark-gray mb-4">
+                            In his role, Bless oversees field operations, manages security personnel deployment, and ensures compliance with all federal and state security regulations. His hands-on approach and strategic thinking have been crucial in implementing best practices and maintaining operational excellence across all APS contracts.
+                        </p>
+                        <p class="text-dark-gray">
+                            Bless's leadership philosophy centers on professional development, tactical proficiency, and proactive security measures. He works diligently to mentor security officers, conduct regular training exercises, and implement innovative security solutions that address evolving threats and client needs. His commitment to excellence ensures that APS remains at the forefront of protective services in the DMV region.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
