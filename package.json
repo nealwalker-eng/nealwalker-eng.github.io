@@ -1,0 +1,55 @@
+{
+  "name": "america-protective-security",
+  "version": "1.0.0",
+  "description": "Professional security services website for America Protective Security",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run lint && npm run optimize && echo 'Build complete'",
+    "dev": "npx http-server . -p 3000 -o",
+    "lint": "npm run lint:js && npm run lint:html && npm run lint:css",
+    "lint:js": "eslint script.js --fix",
+    "lint:html": "echo 'HTML5 validation - use https://validator.w3.org/'",
+    "lint:css": "stylelint styles.css --fix",
+    "optimize": "npm run optimize:css && npm run optimize:js",
+    "optimize:css": "postcss styles.css -o styles.min.css",
+    "optimize:js": "terser script.js -o script.min.js --compress --mangle",
+    "test:lighthouse": "lighthouse --chrome-flags='--headless' --output=html --output-path=./lighthouse-report.html http://localhost:3000",
+    "test:accessibility": "echo 'Run WAVE accessibility test at https://wave.webaim.org/'",
+    "test:performance": "echo 'Test Core Web Vitals and performance metrics'",
+    "validate:html": "html-validate *.html",
+    "audit": "npm run test:lighthouse && echo 'Audit complete - check lighthouse-report.html'"
+  },
+  "devDependencies": {
+    "netlify-plugin-csp-nonce": "^1.0.0",
+    "http-server": "^14.1.1",
+    "eslint": "^8.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "postcss": "^8.0.0",
+    "postcss-cli": "^10.0.0",
+    "autoprefixer": "^10.0.0",
+    "postcss-preset-env": "^9.0.0",
+    "cssnano": "^6.0.0",
+    "terser": "^5.0.0",
+    "lighthouse": "^11.0.0",
+    "html-validate": "^8.0.0"
+  },
+  "netlify": {
+    "functions": "./netlify/functions"
+  },
+  "keywords": [
+    "security",
+    "protective-services",
+    "government-security",
+    "commercial-security",
+    "netlify",
+    "static-site"
+  ],
+  "author": "America Protective Security",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aps-security/website"
+  },
+  "homepage": "https://americaprotectivesecurity.com"
+}
