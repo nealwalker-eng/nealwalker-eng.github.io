@@ -9,6 +9,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  cloud_firestore: any
+  cloud_functions: any
+  firebase_auth: any
+  firebase_core: any
+  firebase_messaging: any
+  firebase_storage: any
+  geolocator: any
+  google_sign_in: any
+  http: any
+  image_picker: any
+  intl: any
+  mobile_scanner: any
+  shared_preferences: any
+  uuid: any
+  flutter_riverpod: any
 
 flutter:
   uses-material-design: true

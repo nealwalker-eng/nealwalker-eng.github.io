@@ -1,8 +1,9 @@
 # SecureReport Mobile App (Flutter)
 
 This folder contains the Flutter mobile app for SecureReport. The current
-implementation provides a navigable MVP skeleton with placeholder data for key
-flows (auth, dashboard, QR scanning, reports, schedules, chat, notifications).
+implementation provides end-to-end feature scaffolding for authentication,
+dashboard, QR scanning, reports (draft + submit), schedules, chat, notifications,
+weather, and offline drafts, with Firebase-backed repositories and mock fallbacks.
 
 ## Getting Started
 
@@ -17,13 +18,16 @@ flows (auth, dashboard, QR scanning, reports, schedules, chat, notifications).
 
 ## Project Structure
 
-- `lib/main.dart`: App entry point with routing and placeholder screens.
-- `pubspec.yaml`: Flutter SDK dependency only. Add packages via
-  `flutter pub add <package>`.
+- `lib/main.dart`: App entry point with Firebase bootstrap and providers.
+- `lib/app.dart`: MaterialApp configuration and routes.
+- `lib/screens.dart`: UI flows for all features.
+- `lib/services.dart`: Firebase + mock repositories and integrations.
+- `lib/models.dart`: Data models used by Firestore and local storage.
+- `lib/providers.dart`: Riverpod wiring for auth and data streams.
+- `pubspec.yaml`: Dependencies for Firebase, QR scanning, GPS, and more.
 
 ## Next Steps
 
-- Replace mock auth with Firebase Auth + Google Sign-In.
-- Integrate Firestore, Storage, and Cloud Functions for reports and schedules.
-- Replace placeholders with live weather, chat, and report data sources.
-- Add platform configuration and Firebase setup files.
+- Configure Firebase via FlutterFire CLI and add platform files.
+- Set WEATHER_API_KEY and Firebase env values for weather integration.
+- Deploy Cloud Functions for report submission and schedule imports.
